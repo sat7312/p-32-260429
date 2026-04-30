@@ -1,18 +1,26 @@
 package com.back.ch34
 
-open class Animal { // 이제 상속 가능
-    open fun makeSound() {
-        println("Some generic animal sound")
+open class Animal {
+    open fun eat() {
+        TODO("Not yet implemented")
     }
 }
 
-class Dog : Animal() {
-    override fun makeSound() { // 메서드 오버라이딩 가능
-        println("Bark! Bark!")
+interface Pet {
+    fun play()
+}
+
+class Dog : Animal(), Pet {
+    override fun eat() {
+        TODO("Not yet implemented")
     }
+
+    override fun play() {
+        TODO("Not yet implemented")
+    }
+
 }
 
 fun main() {
-    val dog = Dog()
-    dog.makeSound() // 출력: Bark! Bark!
+
 }
